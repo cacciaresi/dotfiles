@@ -3,6 +3,9 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
+alias redis="redis-server /usr/local/etc/redis.conf"
+alias ios="cd ~/Library/Application\ Support/iPhone\ Simulator/5.0/Applications/"
+
 
 # List all files colorized in long format, including dot files
 alias l="ls -Gla"
@@ -53,6 +56,7 @@ alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 alias d="cd ~/Documents/Dropbox"
 alias p="cd ~/Projects"
 alias g="git status"
+alias ulc="git reset --soft HEAD^"
 alias v="vim"
 alias m="mate ."
 
