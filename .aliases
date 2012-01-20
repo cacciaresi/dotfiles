@@ -8,7 +8,7 @@ alias ios="cd ~/Library/Application\ Support/iPhone\ Simulator/5.0/Applications/
 
 
 # List all files colorized in long format, including dot files
-alias l="ls -Gla"
+alias l="ls -Glah"
 
 # List only directories
 alias lsd='ls -l | grep "^d"'
