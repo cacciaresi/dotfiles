@@ -1,12 +1,9 @@
 # Easier navigation: .., ..., ~ and -
-alias ..="cd .."
-alias ...="cd ../.."
-alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 alias redis="redis-server /usr/local/etc/redis.conf"
-alias ios="cd ~/Library/Application\ Support/iPhone\ Simulator/5.0/Applications/"
-
-
+alias lf="ls -l | egrep -v '^d'"
+alias ldir="ls -l | egrep '^d'"
+alias apache="cd /etc/apache2"
 # List all files colorized in long format, including dot files
 alias l="ls -Glah"
 
@@ -54,7 +51,6 @@ alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
 # Shortcuts
 alias d="cd ~/Documents/Dropbox"
-alias p="cd ~/Projects"
 alias g="git status"
 alias ulc="git reset --soft HEAD^"
 alias v="vim"
@@ -92,3 +88,5 @@ for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do alias "$method"="lwp-re
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 10'"
 alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
+# sorted list of sizes of each directory
+alias ds="du -k * | sort -nr | cut -f2 | xargs -d '\n' du -sh && echo "" && df -Ph . | tail -1 | awk '{print }'"

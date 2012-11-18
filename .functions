@@ -17,3 +17,16 @@ function json() {
 function digga() {
   dig +nocmd "$1" any +multiline +noall +answer
 }
+
+function add_alias() {
+	COMMAND="$1"
+	ALIAS_NAME="$2"
+	NEW_ALIAS_COMMAND="alias $2=\"$1\""
+	echo "$NEW_ALIAS_COMMAND" >> ~/.aliases
+	source ~/.bash_profile
+	echo "New alias: $NEW_ALIAS_COMMAND"
+}
+
+function bookmark() {
+	add_alias "cd $(pwd)" "$1"	
+}
