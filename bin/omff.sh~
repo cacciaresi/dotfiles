@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Script that order common downladed files inside a folder.
+# I did this to *try* to order my files.
+# Feel free to add any wanted extensions inside the array extensions.
+
+extensions=(rar zip djvu pdf epub gz img txt)
+
+function move_files() {
+    echo "Moving ${var} files to ${var}/"
+    mkdir -p ${var}
+    mv *.${var} ${var}
+}
+
+for var in "${extensions[@]}"
+do
+    [ "$(find . -maxdepth 1 -name "*.${var}" -print -quit)" ] && move_files ${var}
+done
